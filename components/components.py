@@ -10,7 +10,6 @@ class WebElement:
     def click(self):
         self.find_element().click()
 
-
     def find_element(self):
         return self.driver.find_element(By.CSS_SELECTOR, self.locator)
 
@@ -24,4 +23,16 @@ class WebElement:
     def get_text(self):
         return self.find_element().text
 
+    def visible(self):
+        return self.find_element().is_displayed()
 
+    def finde_element(self):
+        return self.driver.find_element(By.CSS_SELECTOR, self.locator)
+
+    def finde_elements(self):
+        return self.driver.find_elements(By.CSS_SELECTOR, self.locator)
+
+    def check_count_elements(self, count:int) -> bool:  #Bool - не обязательно указывать
+        if len(self.finde_elements()) == count:
+            return True
+        return False

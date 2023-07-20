@@ -20,3 +20,15 @@ class BasePage:
     # def find_element(self, locator):
     #     time.sleep(3)
     #     return self.driver.find_element(By.CSS_SELECTOR, locator)
+
+    def back(self):
+        self.driver.back()
+
+    def forward(self):
+        self.driver.forward()
+
+    def refresh(self):
+        self.driver.refresh()
+
+    def get_title(self):
+        return self.driver.title
