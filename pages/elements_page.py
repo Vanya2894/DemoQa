@@ -14,6 +14,7 @@ class ElementPage(BasePage):
         self.btn_sidebar_first_textbox = WebElement(driver, locator=' div:nth-child(1) > div > ul>#item-0')
         self.btn_sidebar_first_checkbox = WebElement(driver, locator='div:nth-child(1) > div > ul>#item-1')
         self.btns_first_menu = WebElement(driver, locator='div:nth-child(1) > div > ul > li')
+        self.nav_bar = WebElement(driver, locator='#app > div > div > div.row > div:nth-child(1) > nav')
 
 
 
