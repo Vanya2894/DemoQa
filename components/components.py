@@ -34,12 +34,13 @@ class WebElement:
             value = self.find_element().get_dom_attribute(name)
             if value is None:
                 return False
-            if len(value) > 0:
-                return value   #возвращает строку        return True    #пустая строка возвращает true
+                if len(value) > 0:
+                    return value   #возвращает строку
+                return True    #пустая строка возвращает true
 
 
         def send_keys(self, text: str):
-            elf.find_element().send_keys(text)
+            self.find_element().send_keys(text)
 
         def check_count_elements(self, count: int) -> bool:
             return len(self.find_elements()) == count

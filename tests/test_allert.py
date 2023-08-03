@@ -3,11 +3,12 @@ from pages.alerts import Alerts
 from pages.elements_page import ElementPage
 from components.components import WebElement
 
+
 def test_page_alert(browser):
     page_alert = Alerts(browser)
 
     page_alert.visit()
-    assert not page_alert.alert
+    assert not page_alert.alert()
     page_alert.alertButton.click()
     time.sleep(2)
     assert page_alert.alert()
@@ -24,6 +25,8 @@ def test_alert_text(browser):
     alert_text.alert().accept()
     assert not alert_text.alert()
 
+
+
 def test_comfirm(browser):
     comfirm_alert = Alerts(browser)
 
@@ -31,7 +34,7 @@ def test_comfirm(browser):
     comfirm_alert.comfirmButton.click()
     time.sleep(2)
     comfirm_alert.alert().dismiss()
-    assert comfirm_alert.comfirmButton.get_text() == 'You selected Cancel'
+    assert comfirm_alert.comfirmResult.get_text() == 'You selected Cancel'
 
 def test_ptomt(browser):
     promt = Alerts(browser)

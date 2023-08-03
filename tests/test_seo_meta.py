@@ -14,4 +14,4 @@ def test_seo_meta(browser, pages):
     time.sleep(2)
     assert page_seo.metaViev.exist()
     assert page_seo.metaViev.get_dom_attribute('name') == 'viewport'
-    assert page_seo.metaViev.get_dom_attribute('content') == 'widht=device-widht,initial-scale=1'
+    assert page_seo.metaViev.get_dom_attribute('content') == 'width=device-width,initial-scale=1'

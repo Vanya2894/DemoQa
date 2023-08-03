@@ -17,4 +17,5 @@ def test_visible_nav_bar(browser):
     browser.set_window_size(400, 565)
     assert nav_bar.nav_bar.visible()
     browser.set_window_size(1000,1000)
+    time.sleep(1)
     assert not nav_bar.nav_bar.visible()
